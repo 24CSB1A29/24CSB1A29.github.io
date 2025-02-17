@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <style>
+    /* Basic reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #3ff798;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 40px 0 20px;
+      font-size: 1.8em;
+      color: #333;
+      text-align: center;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .gallery {
+      margin: 10px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, border 0.2s;
+    }
+
+    .gallery:hover {
+      border: 1px solid #777;
+      transform: scale(1.05);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px 5px 0 0;
+    }
+
+    /* Clear floats after the galleries */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <h1>Anantha Padmanabha Swamy Temple</h1>
+  <div class="clearfix">
+    <div class="gallery">
+      <img src="https://4.bp.blogspot.com/-a_OeB-bsfC0/T0ybIOk-ETI/AAAAAAAAAWo/rfVFFxVnA7E/s640/Anantha+_padmanabhaswamy_temple2.jpg" alt="Temple 1">
+    </div>
+    <div class="gallery">
+      <img src="https://th.bing.com/th/id/OIP.H2CqxQiXFRlH5xE88YJfMgHaFj?w=1200&h=900&rs=1&pid=ImgDetMain" alt="Temple 2">
+    </div>
+    <div class="gallery">
+      <img src="https://www.omastrology.com/indian-temples/images/anantha-padmanabha-swamy-temple-vikarabad.jpg" alt="Temple 3">
+    </div>
+  </div>
+
+  <h1>Bekal Fort</h1>
+  <div class="clearfix">
+    <div class="gallery">
+      <img src="https://th.bing.com/th/id/OIP.96ru8rOccb2vRO4ZXvTAuAHaEW?w=1000&h=587&rs=1&pid=ImgDetMain" alt="Bekal Fort 1">
+    </div>
+    <div class="gallery">
+      <img src="https://th.bing.com/th/id/OIP.jg7V_eItqh26n1bZBDeh9wHaE4?w=1280&h=843&rs=1&pid=ImgDetMain" alt="Bekal Fort 2">
+    </div>
+    <div class="gallery">
+      <img src="https://keralatourpackagesguide.com/wp-content/uploads/2017/09/bekal-for-aerial-view.jpg" alt="Bekal Fort 3">
+    </div>
+  </div>
+
+  <h1>Western Ghats</h1>
+  <div class="clearfix">
+    <div class="gallery">
+      <img src="https://www.bhavyaholidays.com/blogs/wp-content/uploads/2014/03/The-Western-Ghats-A-UNESCO-World-Heritage-Site.jpg" alt="Western Ghats 1">
+    </div>
+    <div class="gallery">
+      <img src="https://th.bing.com/th/id/OIP.CrIq7QVb7yGyktU-mPKirgHaE8?w=6000&h=4000&rs=1&pid=ImgDetMain" alt="Western Ghats 2">
+    </div>
+    <div class="gallery">
+      <img src="https://thebigwild.com/wp-content/uploads/2022/04/western-ghats-india-1.jpg" alt="Western Ghats 3">
+    </div>
+  </div>
+
+  <h1>Edakkal Caves</h1>
+  <div class="clearfix">
+    <div class="gallery">
+      <img src="https://www.keralam.me/wp-content/uploads/2019/03/Edakkal-Caves-wayanad.jpg" alt="Edakkal Caves 1">
+    </div>
+    <div class="gallery">
+      <img src="https://mpholidays.com/wp-content/uploads/2022/10/bhimbetka-cave-2.jpg" alt="Edakkal Caves 2">
+    </div>
+    <div class="gallery">
+      <img src="https://www.traveltoons.in/wp-content/uploads/2020/02/003-1024x428.jpg" alt="Edakkal Caves 3">
+    </div>
+  </div>
+
+  <h1>Poonjar Place</h1>
+  <div class="clearfix">
+    <div class="gallery">
+      <img src="https://hblimg.mmtcdn.com/content/hubble/img/ttd_images/mmt/activities/m_Kottayam_Poonjar_palace_2_l_360_640.jpg" alt="Poonjar Place 1">
+    </div>
+    <div class="gallery">
+      <img src="https://th.bing.com/th/id/OIP.sWjrAj2kqbRrYvTJcIxTIwHaEK?w=1024&h=576&rs=1&pid=ImgDetMain" alt="Poonjar Place 2">
+    </div>
+    <div class="gallery">
+      <img src="https://trip2kerala.com/wp-content/uploads/2022/02/3.jpg" alt="Poonjar Place 3">
+    </div>
+  </div>
+</body>
+</html>
