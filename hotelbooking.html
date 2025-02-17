@@ -49,6 +49,44 @@
         button:hover {
             background-color: #218838;
         }
+         .nav{
+            ul{
+                list-style-type: none;
+                background-color: #20c997;
+                margin: 0;
+                padding: 0;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            li{
+               float:left;
+            }
+            li a{
+                display:block;
+                color:#fdfdfd;
+                text-align: center;
+                padding:14px 16px;
+                text-decoration: none;
+                position: sticky;
+                transition :color 0.3s;
+            }
+            li a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffd700;
+            transition: width 0.3s ease;
+            }
+            li a:hover::after{
+                width:100%;
+            }
+            li a:hover{
+                color: #ffd700;
+            }
+        }
     </style>
 </head>
 <body>
