@@ -1,0 +1,14 @@
+legend{
+    text-align: center;
+    text-shadow: 1px 1px black;
+}
+form{
+    text-align: center;
+    background-color: aquamarine;
+}
+input:hover{
+    background-color: chartreuse;
+}
+body{
+    background-color: beige;
+}
