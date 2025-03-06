@@ -44,7 +44,7 @@ function addfilm() {
     document.getElementById('film').value = '';
 }
 function displayfilm(){
-    document.getElementById('display').textContent = textArray;
+    document.getElementById('display').innerHTML = textArray;
     let size=textArray.length;
     document.getElementById('display1').innerHTML = size;
 }
