@@ -8,51 +8,61 @@
 </head>
 <body>
    <fieldset>
-       <legend>
-        Favourite films
-       </legend>
+       <legend>Favourite films</legend>
        <form> 
-        <label for="film">Enter your favourite film:</label>
-        <input type="text" id="film" placeholder="Film name">
-        <br>
-        <br>
-        <input  onclick="addfilm()"    type="button" value="add" id="submit">
-        <br>
-        <br>
-        <p>Favourite films are: <span id="display"></span></p>
-        <p id="display1"></p>
-        <input onclick="displayfilm()" type="button" value="Display" >
-        <input onclick="erasefilms()" type="button" value="Clear">
-        
-    </form>
+            <label for="film">Enter your favourite film:</label>
+            <input type="text" id="film" placeholder="Film name">
+            <br><br>
+            <input onclick="addfilm()" type="button" value="Add" id="submit">
+            <br><br>
+            <p>Favourite films are:</p>
+            <ul id="display"></ul>  <!-- Changed from <span> to <ul> -->
+            <p>Total films: <span id="display1"></span></p>
+            <input onclick="displayfilm()" type="button" value="Display">
+            <input onclick="erasefilms()" type="button" value="Clear">
+        </form>
    </fieldset>
+
     <script>
-       
-let textArray = [];
+        let textArray = [];
 
-function addfilm() {
-    
-    let textInput = document.getElementById('film').value;
+        function addfilm() {
+            let textInput = document.getElementById('film').value.trim();
 
-    
-    textArray.push(textInput);
+            if (textInput === "") {
+                alert("Please enter a movie name!");
+                return;
+            }
 
-    
-  
+            textArray.push(textInput);
+            document.getElementById('film').value = '';
+            displayfilm(); 
+        }
 
-   
-    document.getElementById('film').value = '';
-}
-function displayfilm(){
-    document.getElementById('display').innerHTML = textArray;
-    let size=textArray.length;
-    document.getElementById('display1').innerHTML = size;
-}
-function erasefilms(){
-    textArray.splice(0, textArray.length);
-}
+        function displayfilm() {
+            let displayList = document.getElementById('display');
+            displayList.innerHTML = ""; 
+            textArray.forEach((film, index) => {
+                let li = document.createElement('li');
+                li.textContent = film;
+                li.style.cursor = "pointer";
+                
+                li.onclick = function() { removefilm(index); };
+                displayList.appendChild(li);
+            });
 
+            document.getElementById('display1').textContent = textArray.length;
+        }
 
+        function removefilm(index) {
+            textArray.splice(index, 1);
+            displayfilm(); 
+        }
+
+        function erasefilms() {
+            textArray = []; 
+            displayfilm();  
+        }
     </script>
 </body>
 </html>
